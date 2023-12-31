@@ -7,7 +7,7 @@ repo_url: https://github.com/cmip-ipo-internal/ipo-developer-wiki
 branch: main
 
 theme:
-  # name: None
+  name: null
   logo: assets/CMIP_Icon_CMYK_negative.svg
   custom_dir: overrides
   features:
