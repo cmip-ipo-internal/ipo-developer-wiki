@@ -44,8 +44,13 @@ jobs:
         echo "No local changes to commit."
         fi
         
-        git checkout production
 
+
+
+        git checkout production
+        git add -A
+        git commit -m 'prodtest'
+        git push 
         ls ./
 
         # Remove files and directories from the production branch
