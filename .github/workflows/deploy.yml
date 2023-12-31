@@ -26,9 +26,7 @@ jobs:
         pip install mkdocs mkdocs-material pymdown-extensions
 
     - name: Build MkDocs
-      run: 
-        
-        mkdocs build --clean --verbose 
+      run: mkdocs build --clean --verbose 
         
 
     - name: Create and force push to documentation branch
