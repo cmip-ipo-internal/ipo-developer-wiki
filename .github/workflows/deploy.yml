@@ -33,3 +33,27 @@ jobs:
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor }}@users.noreply.github.com"
         
+        git fetch --all
+    
+        # Check if there are any local changes
+        if [ -n "$(git status --porcelain)" ]; then
+        # If there are changes, commit them
+        git add .
+        git commit -m "Committing local changes before switching branches"
+        else
+        echo "No local changes to commit."
+        fi
+        
+        git checkout production
+
+        # Remove files and directories from the production branch
+        git rm -r --ignore-unmatch */*
+
+        git checkout main -- site
+
+        
+        # git mv site docs
+        git add -A
+        git commit -m "Content update"
+        
+        git push 
