@@ -26,10 +26,14 @@ jobs:
         pip install mkdocs mkdocs-material pymdown-extensions
 
     - name: Build MkDocs
-      run: mkdocs build --clean
+      run: 
+        
+        mkdocs build --clean --verbose 
+        
 
     - name: Create and force push to documentation branch
       run: |
+        mkdocs build --clean --verbose 
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor }}@users.noreply.github.com"
         
@@ -38,7 +42,7 @@ jobs:
         # Check if there are any local changes
         if [ -n "$(git status --porcelain)" ]; then
         # If there are changes, commit them
-        git add .
+        git add -A
         git commit -m "Committing local changes before switching branches"
         else
         echo "No local changes to commit."
@@ -48,9 +52,9 @@ jobs:
 
 
         git checkout production
-        git add -A
-        git commit -m 'prodtest'
-        git push 
+        # git add -A
+        # git commit -m 'prodtest'
+        # git push 
         ls ./
 
         # Remove files and directories from the production branch
