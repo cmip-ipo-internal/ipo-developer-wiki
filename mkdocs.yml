@@ -1,0 +1,69 @@
+
+site_name: 'Developer Documentation for CMIP-IPO related tasks'
+site_description: 'Useful information for the management and development of various systems. '
+site_author: 'Daniel Ellis'
+
+
+theme:
+  name: windmill_dark
+  logo: assets/CMIP_Icon_CMYK_negative.svg
+  custom_dir: overrides
+  features:
+    - navigation.footer
+    - search.suggest
+    - header.autohide
+  plugins:
+    - search
+    - optimize
+
+  copyright: CCBY04 2023+ Daniel Ellis for the CMIP-IPO  (made with material for mkdocs)
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: windmill_dark/toggle-switch
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: windmill_dark/toggle-switch-off-outline
+        name: Switch to light mode
+extra_css: 
+  - stylesheets/extra.css
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+
+
+# repo_url: https://github.com/noraj/mkdocs-windmill-dark
+# # 
+# theme:
+#     name: null
+#     custom_dir: mkdocs_windmill_dark
+#     # default from mkdocs_theme.yml
+#     static_templates:
+#         - 404.html
+#     include_search_page: true
+#     search_index_only: true
+#     history_buttons: true
+#     article_nav_top: true
+#     article_nav_bottom: true
+
+# nav:
+#     - Usage: index.md
+#     - Customization: customization.md
+#     - Samples:
+#         - Sample Page A: sample-a.md
+#         - Sample Subfolder:
+#             - Sample Subpage A1: sample-a1.md
+#             - Sample Subpage A2: sample-a2.md
+#         - Sample Page B: sample-b.md
+
+# markdown_extensions:
+#     - toc:
+#         permalink: '#'
+
+# extra:
+#     version: 0.1.4
