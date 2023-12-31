@@ -39,8 +39,8 @@ jobs:
         # Check if there are any local changes
         if [ -n "$(git status --porcelain)" ]; then
         # If there are changes, commit them
-        mkdir site
-        git add -A
+       
+        git add -A -f
         git commit -m "Committing local changes before switching branches"
         else
         echo "No local changes to commit."
