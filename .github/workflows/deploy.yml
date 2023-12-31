@@ -1,4 +1,4 @@
-name: mkdocs_build_deploy
+name: MkDocs Build + Deploy
 
 on:
   push:
@@ -15,17 +15,6 @@ jobs:
 
     - name: Set up Python
       uses: actions/setup-python@v2
-      with:
-        python-version: 3.8  # Choose the Python version you need
-
-    - name: Cache dependencies
-      uses: actions/cache@v2
-      with:
-        path: |
-          ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('**/*.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-pip-
 
     - name: Install dependencies
       run: |
@@ -39,5 +28,14 @@ jobs:
       run: |
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor }}@users.noreply.github.com"
-        
-        # Your existing script to force push to the documentation branch
+        # git branch --delete production
+        git checkout -b production  # Replace 'documentation' with the desired branch name
+        # git checkout production
+        find . -type f ! -path './site*' ! -path './.*' -exec echo {} +
+        find . -type f ! -path './site*' ! -path './.*' -exec rm -f {} +
+        rm -rf docs 
+        mv site docs
+        touch .nojekyll
+        git add .
+        git commit -m "Content update"
+        git push --force origin production
