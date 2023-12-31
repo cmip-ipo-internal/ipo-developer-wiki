@@ -47,10 +47,10 @@ jobs:
 
 
 
-        # git checkout production
-        # git add -A
-        # git commit -m 'prodtest'
-        # git push 
+        git checkout production
+        git add -A
+        git commit -m 'prodtest'
+        git push 
         ls ./
 
         # Remove files and directories from the production branch
