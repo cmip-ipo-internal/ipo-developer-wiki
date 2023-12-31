@@ -46,10 +46,13 @@ jobs:
         
         git checkout production
 
+        ls ./
+
         # Remove files and directories from the production branch
         git rm -r --ignore-unmatch */*
 
         git checkout main -- site
+
 
         
         # git mv site docs
