@@ -8,7 +8,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
-  
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -32,14 +32,4 @@ jobs:
       run: |
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor }}@users.noreply.github.com"
-        # git branch --delete production
-        git checkout -b production  # Replace 'documentation' with the desired branch name
-        # git checkout production
-        find . -type f ! -path './site*' ! -path './.*' -exec echo {} +
-        find . -type f ! -path './site*' ! -path './.*' -exec rm -f {} +
-        rm -rf docs 
-        mv site docs
-        touch .nojekyll
-        git add .
-        git commit -m "Content update"
-        git push --force origin production
+        
