@@ -3,9 +3,6 @@ site_name: 'Developer Documentation for CMIP-IPO related tasks'
 site_description: 'Useful information for the management and development of various systems. '
 site_author: 'Daniel Ellis'
 
-repo_url: https://github.com/cmip-ipo-internal/ipo-developer-wiki
-branch: main
-
 theme:
   name: material
   logo: assets/CMIP_Icon_CMYK_negative.svg

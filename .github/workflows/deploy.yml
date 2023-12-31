@@ -31,7 +31,6 @@ jobs:
 
     - name: Create and force push to documentation branch
       run: |
-        mkdocs build --clean --verbose 
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor }}@users.noreply.github.com"
         
