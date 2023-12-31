@@ -5,7 +5,7 @@ site_author: 'Daniel Ellis'
 
 
 theme:
-  name: windmill_dark
+  name: windmill-dark
   logo: assets/CMIP_Icon_CMYK_negative.svg
   custom_dir: overrides
   features:
@@ -21,12 +21,12 @@ theme:
     # Palette toggle for light mode
     - scheme: default
       toggle:
-        icon: windmill_dark/toggle-switch
+        icon: windmill-dark/toggle-switch
         name: Switch to dark mode
     # Palette toggle for dark mode
     - scheme: slate
       toggle:
-        icon: windmill_dark/toggle-switch-off-outline
+        icon: windmill-dark/toggle-switch-off-outline
         name: Switch to light mode
 extra_css: 
   - stylesheets/extra.css
