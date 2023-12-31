@@ -7,7 +7,7 @@ repo_url: https://github.com/cmip-ipo-internal/ipo-developer-wiki
 branch: main
 
 theme:
-  name: null
+  name: material
   logo: assets/CMIP_Icon_CMYK_negative.svg
   custom_dir: overrides
   features:
@@ -19,19 +19,20 @@ theme:
     - optimize
 
   copyright: CCBY04 2023+ Daniel Ellis for the CMIP-IPO  (made with material for mkdocs)
-  # palette: 
-  #   # Palette toggle for light mode
-  #   - scheme: default
-  #     toggle:
-  #       icon: windmill-dark/toggle-switch
-  #       name: Switch to dark mode
-  #   # Palette toggle for dark mode
-  #   - scheme: slate
-  #     toggle:
-  #       icon: windmill-dark/toggle-switch-off-outline
-  #       name: Switch to light mode
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
 extra_css: 
   - stylesheets/extra.css
+  - stylesheets/windmill.css
 markdown_extensions:
   - admonition
   - pymdownx.details
