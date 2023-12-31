@@ -26,14 +26,14 @@ jobs:
         pip install mkdocs mkdocs-material pymdown-extensions
 
     - name: Build MkDocs
-      run: mkdocs build --clean --verbose 
+      run: mkdocs build --clean
         
 
     - name: Create and force push to documentation branch
       run: |
-        git config user.name "Daniel Ellis"
-        git config user.email "daniel.ellis@ext.esa.int"
-         
+        git config user.name "${{ github.actor }}"
+        git config user.email "${{ github.actor }}@users.noreply.github.com"
+        
         git fetch --all
     
         # Check if there are any local changes
