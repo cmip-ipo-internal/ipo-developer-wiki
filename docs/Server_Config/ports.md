@@ -43,7 +43,13 @@ If UFW is not working, we can enable it with:
 
 Syntax to open specific TCP port:
 
-```sudo ufw allow (port)/tcp```
+```bash 
+sudo ufw allow <port>
+sudo ufw reload
+```
+
+
+
 
 __Example__:
 

@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../../Server%20Config/ssh/">
+        <link rel="prev" href="../nginx/">
       
       
-        <link rel="next" href="../CMIP6Plus/">
+        <link rel="next" href="../ssh/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Acknowledgement - Developer Documentation for CMIP-IPO related tasks</title>
+        <title>Configuring the Ports - Developer Documentation for CMIP-IPO related tasks</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#acknowledgement" class="md-skip">
+        <a href="#configuring-the-ports" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Acknowledgement
+              Configuring the Ports
             
           </span>
         </div>
@@ -468,19 +468,21 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -494,7 +496,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Server Config
@@ -508,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Server%20Config/2FA%20management/" class="md-nav__link">
+      <a href="../2FA%20management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -529,7 +531,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Server%20Config/floating_ip/" class="md-nav__link">
+      <a href="../FASTAPI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI (Gunicorn)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../floating_ip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -550,11 +573,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Server%20Config/ports/" class="md-nav__link">
+      <a href="../nginx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Configuring the Ports
+    Nginx
   </span>
   
 
@@ -568,10 +591,170 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Configuring the Ports
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Configuring the Ports
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing the Firewall
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing the Firewall">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-ufw" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is UFW
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation instructions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-commands-to-check-enable-and-add-ports-to-the-firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Commands to check, enable and add ports to the firewall.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Commands to check, enable and add ports to the firewall.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-status-and-enable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check status, and enable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allowing-a-new-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allowing a new port.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-the-configuration-of-the-firewall-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking the configuration of the firewall ports.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checking the configuration of the firewall ports.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-a-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting a port.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../Server%20Config/ssh/" class="md-nav__link">
+      <a href="../ssh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -596,163 +779,36 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
-    Untitled folder
+    Scripts
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            Untitled folder
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Acknowledgement
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Acknowledgement
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#mip-cmor-tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      MIP CMOR Tables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cmip6plus-cvs" class="md-nav__link">
-    <span class="md-ellipsis">
-      CMIP6Plus CVS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wiki-forms-automations-and-infrastructure-work" class="md-nav__link">
-    <span class="md-ellipsis">
-      Wiki, Forms, Automations, and Infrastructure work.
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    CMIP6Plus
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_2">
-            <span class="md-nav__icon md-icon"></span>
-            CMIP6Plus
+            Scripts
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -763,176 +819,15 @@
   
   
     <li class="md-nav__item">
-      <a href="../CMIP6Plus/" class="md-nav__link">
+      <a href="../../scripts/update_repos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    What is CMIP6Plus
+    CRON update github repositories.
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    MIP Tables
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_3">
-            <span class="md-nav__icon md-icon"></span>
-            MIP Tables
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../MIP_Tables/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    mip-cmor-tables
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Submit Data
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_4">
-            <span class="md-nav__icon md-icon"></span>
-            Submit Data
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Submit_Data/01_Background/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Background
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Submit_Data/Source_ID/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Adding a Source ID
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -972,29 +867,101 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mip-cmor-tables" class="md-nav__link">
+  <a href="#installing-the-firewall" class="md-nav__link">
     <span class="md-ellipsis">
-      MIP CMOR Tables
+      Installing the Firewall
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing the Firewall">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-ufw" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is UFW
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#cmip6plus-cvs" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#installation-instructions" class="md-nav__link">
     <span class="md-ellipsis">
-      CMIP6Plus CVS
+      Installation instructions
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#wiki-forms-automations-and-infrastructure-work" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#system-commands-to-check-enable-and-add-ports-to-the-firewall" class="md-nav__link">
     <span class="md-ellipsis">
-      Wiki, Forms, Automations, and Infrastructure work.
+      System Commands to check, enable and add ports to the firewall.
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="System Commands to check, enable and add ports to the firewall.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-status-and-enable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check status, and enable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allowing-a-new-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allowing a new port.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-the-configuration-of-the-firewall-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking the configuration of the firewall ports.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checking the configuration of the firewall ports.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-a-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting a port.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1013,82 +980,173 @@
                   
 
 
-<h1 id="acknowledgement">Acknowledgement</h1>
-<p>The work within most repositories can be attributed to a large number of contributers. A collection of those involved can be found here. </p>
-<h2 id="mip-cmor-tables">MIP CMOR Tables</h2>
-<p>The repository content has been developed by climate and computer scientists representing the Coupled Model Intercomparison Project phase 6 (CMIP6) and earlier phases, including those from climate modeling groups and model intercomparison projects (MIPs) worldwide. A special mention to Dr. Martin Juckes from the UK Centre for Environmental Data Analysis (<a href="https://www.ceda.ac.uk/">CEDA</a>) for leading efforts in the <a href="https://cmip6dr.github.io/Data_Request_Home/">CMIP6 Data Request</a>. The structure of repository content and tools required to maintain it was developed by climate and computer scientists from the Program for Climate Model Diagnosis and Intercomparison (<a href="https://pcmdi.llnl.gov/">PCMDI</a>) at Lawrence Livermore National Laboratory (<a href="https://www.llnl.gov/">LLNL</a>) and the <a href="https://www.metoffice.gov.uk/">UK MetOffice</a>, with assistance from colleagues at the Coupled Model Intercomparison Project International Project Office (<a href="https://wcrp-cmip.org/cmip-governance/project-office/">CMIP-IPO</a>), the Deutsches Klimarechenzentrum (<a href="https://www.dkrz.de/en/">DKRZ</a>) in Germany and the members of the Infrastructure for the European Network for Earth System Modelling (<a href="https://is.enes.org/">IS-ENES</a>) consortium.</p>
-<p>This work is sponsored by the Regional and Global Model Analysis (<a href="https://climatemodeling.science.energy.gov/program/regional-global-model-analysis">RGMA</a>) program of the Earth and Environmental Systems Sciences Division (<a href="https://science.osti.gov/ber/Research/eessd">EESSD</a>) in the Office of Biological and Environmental Research (<a href="https://science.osti.gov/ber">BER</a>) within the Department of Energy's (<a href="https://www.energy.gov/">DOE</a>) Office of Science (<a href="https://science.osti.gov/">OS</a>). The work at PCMDI is performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344.</p>
-<p>
-    <img src="https://pcmdi.github.io/assets/PCMDI/100px-PCMDI-Logo-NoText-square-png8.png"
-         width="65"
-         style="margin-right: 30px"
-         title="Program for Climate Model Diagnosis and Intercomparison"
-         alt="Program for Climate Model Diagnosis and Intercomparison"
-    >&nbsp;
-    <img src="https://pcmdi.github.io/assets/DOE/480px-DOE_Seal_Color.png"
-         width="65"
-         style="margin-right: 30px"
-         title="United States Department of Energy"
-         alt="United States Department of Energy"
-    >&nbsp;
-    <img src="https://pcmdi.github.io/assets/LLNL/212px-LLNLiconPMS286-WHITEBACKGROUND.png"
-         width="65"
-         style="margin-right: 30px"
-         title="Lawrence Livermore National Laboratory"
-         alt="Lawrence Livermore National Laboratory"
-    >&nbsp;
-    <img src="https://pcmdi.github.io/assets/MetOffice/100px-Met_Office_LogoBLACK.png"
-         width="65"
-         style="margin-right: 30px"
-         title="UK Met Office"
-         alt="UK Met Office"
-    >&nbsp;
-    <img src="https://pcmdi.github.io/assets/CMIP/100px-CMIP_Logo_RGB_Positive-square-96dpi.png"
-         width="65"
-         style="margin-right: 30px"
-         title="Couple Model Intercomparison Project International Project Office"
-         alt="Couple Model Intercomparison Project International Project Office"
-    >
-</p>
+<h1 id="configuring-the-ports">Configuring the Ports</h1>
+<p>There are two parts to configuring the ports used by your virutal machine.:</p>
+<ul>
+<li>
+<p>The first involves configuring the firewall and opening access to the ports. </p>
+</li>
+<li>
+<p>[optional] The second requires you to allow access to the afforementioned ports on your cloud service provider. </p>
+</li>
+</ul>
+<h2 id="installing-the-firewall">Installing the Firewall</h2>
+<h3 id="what-is-ufw">What is UFW</h3>
+<p>Uncomplicated Firewall (UFW) is a user-friendly interface for managing iptables on Linux systems. It simplifies the configuration of firewall rules, making it accessible even for users with limited networking knowledge.</p>
+<h3 id="installation-instructions">Installation instructions</h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ufw
+</code></pre></div>
+<h3 id="system-commands-to-check-enable-and-add-ports-to-the-firewall">System Commands to check, enable and add ports to the firewall.</h3>
+<h4 id="check-status-and-enable">Check status, and enable</h4>
+<p>Check the service status with standard systemctl command:</p>
+<p><code>sudo systemctl status ufw</code></p>
+<p>If UFW is not working, we can enable it with:</p>
+<p><code>sudo ufw enable</code></p>
+<h4 id="allowing-a-new-port">Allowing a new port.</h4>
+<p>Syntax to open specific TCP port:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>&lt;port&gt;
+sudo<span class="w"> </span>ufw<span class="w"> </span>reload
+</code></pre></div>
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">53</span>/tcp
 
-<h2 id="cmip6plus-cvs">CMIP6Plus CVS</h2>
-<p>The repository content has been collected from many contributors representing the Coupled Model Intercomparison Project phase 6+ (CMIP6Plus), including those from climate modeling groups and model intercomparison projects (MIPs) worldwide. The structure of content and tools required to maintain it was developed by climate and computer scientists from the Coupled Model Intercomparison Project International Project Office (<a href="https://wcrp-cmip.org/cmip-governance/project-office/">CMIP-IPO</a>), the Program for Climate Model Diagnosis and Intercomparison (<a href="https://pcmdi.llnl.gov/">PCMDI</a>) at Lawrence Livermore National Laboratory (<a href="https://www.llnl.gov/">LLNL</a>), and the <a href="https://www.metoffice.gov.uk/">UK MetOffice</a>, with assistance from colleagues at the UK Centre for Environmental Data Analysis (<a href="https://www.ceda.ac.uk/">CEDA</a>), the Deutsches Klimarechenzentrum (<a href="https://www.dkrz.de/en/">DKRZ</a>) in Germany and the members of the Infrastructure for the European Network for Earth System Modelling (<a href="https://is.enes.org/">IS-ENES</a>) consortium.</p>
-<p>This work is sponsored by the Regional and Global Model Analysis (<a href="https://climatemodeling.science.energy.gov/program/regional-global-model-analysis">RGMA</a>) program of the Earth and Environmental Systems Sciences Division (<a href="https://science.osti.gov/ber/Research/eessd">EESSD</a>) in the Office of Biological and Environmental Research (<a href="https://science.osti.gov/ber">BER</a>) within the Department of Energy's (<a href="https://www.energy.gov/">DOE</a>) Office of Science (<a href="https://science.osti.gov/">OS</a>). The work at PCMDI is performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344.</p>
-<p>
-    <img src="https://pcmdi.github.io/assets/CMIP/100px-CMIP_Logo_RGB_Positive-square-96dpi.png"
-         width="65"
-         style="margin-right: 30px"
-         title="Couple Model Intercomparison Project International Project Office"
-         alt="Couple Model Intercomparison Project International Project Office"
-    >&nbsp;
-    <img src="https://pcmdi.github.io/assets/PCMDI/100px-PCMDI-Logo-NoText-square-png8.png"
-         width="65"
-         style="margin-right: 30px"
-         title="Program for Climate Model Diagnosis and Intercomparison"
-         alt="Program for Climate Model Diagnosis and Intercomparison"
-    >&nbsp;
-    <img src="https://pcmdi.github.io/assets/DOE/480px-DOE_Seal_Color.png"
-         width="65"
-         style="margin-right: 30px"
-         title="United States Department of Energy"
-         alt="United States Department of Energy"
-    >&nbsp;
-    <img src="https://pcmdi.github.io/assets/LLNL/212px-LLNLiconPMS286-WHITEBACKGROUND.png"
-         width="65"
-         style="margin-right: 30px"
-         title="Lawrence Livermore National Laboratory"
-         alt="Lawrence Livermore National Laboratory"
-    >&nbsp;
-    <img src="https://pcmdi.github.io/assets/MetOffice/100px-Met_Office_LogoBLACK.png"
-         width="65"
-         style="margin-right: 30px"
-         title="UK Met Office"
-         alt="UK Met Office"
-    >
-</p>
+<span class="c1"># Syntax supports also names which refer to specific ports:</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>https
 
-<h2 id="wiki-forms-automations-and-infrastructure-work">Wiki, Forms, Automations, and Infrastructure work.</h2>
-<p>CMIP IPO (Daniel Ellis), LLNL (Paul Durack), MOHC (Matthew Mizielinski)</p>
+<span class="c1"># To allow incoming tcp and udp packets on port 21, enter:</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">21</span>
+
+<span class="c1"># Example for specific IP Address:</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>from<span class="w"> </span><span class="m">190</span>.34.21.113<span class="w"> </span>to<span class="w"> </span>any<span class="w"> </span>port
+</code></pre></div>
+<h4 id="checking-the-configuration-of-the-firewall-ports">Checking the configuration of the firewall ports.</h4>
+<p>Let’s check the configuration:</p>
+<p><code>sudo ufw status verbose</code>
+Command displays a provisional table with three columns:</p>
+<h5 id="explanation">Explanation:</h5>
+<ul>
+<li>
+<p><code>To</code> Describes the particular protocol</p>
+</li>
+<li>
+<p><code>Action</code> Tells us whether it is allowed or denied</p>
+</li>
+<li>
+<p><code>From</code> It says about the source e.g anywhere or one ip address like presented above</p>
+</li>
+</ul>
+<h3 id="selecting-a-port">Selecting a port.</h3>
+<p>We need to select the correct ports for the purpose and only open those which we require. Our choices should ensure that prevent any potential security vulnerabilitues by strategically assigning and managing ports witih a network, </p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Protocol</th>
+<th>Main</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>80</td>
+<td>HTTP</td>
+<td>Yes</td>
+<td>Default port for unsecured web traffic. Widely supported and commonly used.</td>
+</tr>
+<tr>
+<td>443</td>
+<td>HTTPS</td>
+<td>Yes</td>
+<td>Default port for secure web traffic using SSL/TLS. Encrypted communication for sensitive data.</td>
+</tr>
+<tr>
+<td>8080</td>
+<td>HTTP</td>
+<td>Yes</td>
+<td>Common alternative for HTTP. Often used for testing and development.</td>
+</tr>
+<tr>
+<td>8443</td>
+<td>HTTPS</td>
+<td>Yes</td>
+<td>Common alternative for HTTPS. Often used for testing and development with SSL/TLS.</td>
+</tr>
+<tr>
+<td>8000</td>
+<td>HTTP</td>
+<td>Yes</td>
+<td>Another alternative for HTTP. Can be used for various applications and testing.</td>
+</tr>
+<tr>
+<td>3000</td>
+<td>HTTP</td>
+<td>Yes</td>
+<td>Commonly used in development environments for web applications.</td>
+</tr>
+<tr>
+<td>5000</td>
+<td>HTTP</td>
+<td>Yes</td>
+<td>Often used for web applications, including some frameworks like Flask.</td>
+</tr>
+<tr>
+<td>8888</td>
+<td>HTTP</td>
+<td>Yes</td>
+<td>Commonly used in development environments, especially with Jupyter Notebooks.</td>
+</tr>
+<tr>
+<td>8081</td>
+<td>HTTP</td>
+<td>No</td>
+<td>Often used as an alternative HTTP port, especially in development environments.</td>
+</tr>
+<tr>
+<td>8880</td>
+<td>HTTP</td>
+<td>No</td>
+<td>Another alternative for HTTP, sometimes used in testing and development.</td>
+</tr>
+<tr>
+<td>9000</td>
+<td>HTTP</td>
+<td>No</td>
+<td>Commonly used in development environments, especially with PHP applications.</td>
+</tr>
+<tr>
+<td>8088</td>
+<td>HTTP</td>
+<td>No</td>
+<td>Used in some applications and development scenarios as an alternative HTTP port.</td>
+</tr>
+<tr>
+<td>8090</td>
+<td>HTTP</td>
+<td>No</td>
+<td>Frequently used as an alternative HTTP port for various applications.</td>
+</tr>
+<tr>
+<td>8181</td>
+<td>HTTP</td>
+<td>No</td>
+<td>Occasionally used for HTTP, especially in testing and development.</td>
+</tr>
+<tr>
+<td>8889</td>
+<td>HTTP</td>
+<td>No</td>
+<td>Another alternative for HTTP, sometimes chosen for specific applications.</td>
+</tr>
+<tr>
+<td>9090</td>
+<td>HTTP</td>
+<td>No</td>
+<td>Used in some applications and development environments as an alternative HTTP port.</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1129,9 +1187,9 @@
           
             
             <a
-              href="../../Server%20Config/ssh/"
+              href="../nginx/"
               class="md-footer__link md-footer__link--prev"
-              aria-label="Previous: SSH login and RSA keys"
+              aria-label="Previous: Nginx"
             >
               <div class="md-footer__button md-icon">
                 
@@ -1142,7 +1200,7 @@
                   Previous
                 </span>
                 <div class="md-ellipsis">
-                  SSH login and RSA keys
+                  Nginx
                 </div>
               </div>
             </a>
@@ -1152,16 +1210,16 @@
           
             
             <a
-              href="../CMIP6Plus/"
+              href="../ssh/"
               class="md-footer__link md-footer__link--next"
-              aria-label="Next: What is CMIP6Plus"
+              aria-label="Next: SSH login and RSA keys"
             >
               <div class="md-footer__title">
                 <span class="md-footer__direction">
                   Next
                 </span>
                 <div class="md-ellipsis">
-                  What is CMIP6Plus
+                  SSH login and RSA keys
                 </div>
               </div>
               <div class="md-footer__button md-icon">
