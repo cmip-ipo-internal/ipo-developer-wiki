@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../credoias_ports/">
+        <link rel="prev" href="../FASTAPI/">
       
       
-        <link rel="next" href="../nginx/">
+        <link rel="next" href="../floating_ip/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Adding a floating IP on CREODIAS - Developer Documentation for CMIP-IPO related tasks</title>
+        <title>Ports and Security groups (CREDOIAS) - Developer Documentation for CMIP-IPO related tasks</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adding-a-floating-ip-on-creodias" class="md-skip">
+        <a href="#ports-and-security-groups-credoias" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Adding a floating IP on CREODIAS
+              Ports and Security groups (CREDOIAS)
             
           </span>
         </div>
@@ -549,27 +549,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../credoias_ports/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Ports and Security groups (CREDOIAS)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -582,18 +561,29 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
   
   <span class="md-ellipsis">
-    Adding a floating IP on CREODIAS
+    Ports and Security groups (CREDOIAS)
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+      </a>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../floating_ip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -602,44 +592,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-are-floating-ips" class="md-nav__link">
-    <span class="md-ellipsis">
-      What are floating IPs
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-assign-a-floating-ip" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to assign a Floating IP?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -800,32 +752,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-are-floating-ips" class="md-nav__link">
-    <span class="md-ellipsis">
-      What are floating IPs
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-assign-a-floating-ip" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to assign a Floating IP?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -839,20 +765,24 @@
                   
 
 
-<h1 id="adding-a-floating-ip-on-creodias">Adding a floating IP on CREODIAS</h1>
-<p>To access our machine externally we first need to give it an address on how to do this. This page does just that. </p>
-<h2 id="what-are-floating-ips">What are floating IPs</h2>
-<p>Floating IPs in OpenStack are public IP addresses assigned to your Virtual Machines.These allow us to host services like SSH or HTTP(s) over the Internet.</p>
-<h2 id="how-to-assign-a-floating-ip">How to assign a Floating IP?</h2>
-<ol>
-<li>Open the instances tab in Horizon</li>
-<li>Use the dropdown menu and select the <code>Associate Floating IP</code> option. </li>
-<li>You may choose an address from the dropdown menu, but if it’s empty, you need to allocate an address first. Click the + icon on the right.</li>
-<li>Allocate IP.</li>
-</ol>
-<div class="admonition warning">
-<p class="admonition-title">The IP address should be associated with a local address from the 192.168.x.x subnet. If you have a 10.x.x.x address change it to an 192.168.x.x address.</p>
-</div>
+<h1 id="ports-and-security-groups-credoias">Ports and Security groups (CREDOIAS)</h1>
+<p>1. Navigate to <a href="https://horizon.cloudferro.com/project/">https://horizon.cloudferro.com/project/</a></p>
+<p>2. Click "Network"</p>
+<p><img alt="" src="https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2024-01-09/b7acd38f-0c15-4e4a-a524-8ab4c0e0770c/user_cropped_screenshot.jpeg?tl_px=0,45&amp;br_px=727,473&amp;force_format=png&amp;width=764&amp;wat_scale=68&amp;wat=1&amp;wat_opacity=1&amp;wat_gravity=northwest&amp;wat_url=https://colony-recorder.s3.amazonaws.com/images/watermarks/0EA5E9_standard.png&amp;wat_pad=104,280" /></p>
+<p>3. Click "Security Groups"</p>
+<p><img alt="" src="https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2024-01-09/a2034aa0-e989-4c21-af26-d9a577c6b05e/user_cropped_screenshot.jpeg?tl_px=0,0&amp;br_px=221,284&amp;force_format=png&amp;width=670&amp;wat_scale=59&amp;wat=1&amp;wat_opacity=1&amp;wat_gravity=northwest&amp;wat_url=https://colony-recorder.s3.amazonaws.com/images/watermarks/0EA5E9_standard.png&amp;wat_pad=521,527" /></p>
+<p>4. Click "Create Security Group"</p>
+<p><img alt="" src="https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2024-01-09/96359664-ddc1-473a-9571-d48e1d98f118/user_cropped_screenshot.jpeg?tl_px=429,0&amp;br_px=1289,480&amp;force_format=png&amp;width=860&amp;wat_scale=76&amp;wat=1&amp;wat_opacity=1&amp;wat_gravity=northwest&amp;wat_url=https://colony-recorder.s3.amazonaws.com/images/watermarks/0EA5E9_standard.png&amp;wat_pad=575,134" /></p>
+<p>5. Enter the name.</p>
+<p><img alt="" src="https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2024-01-09/ba140600-5a75-4782-9dc8-173d194aec36/user_cropped_screenshot.jpeg?tl_px=0,0&amp;br_px=729,337&amp;force_format=png&amp;width=860&amp;wat_scale=76&amp;wat=1&amp;wat_opacity=1&amp;wat_gravity=northwest&amp;wat_url=https://colony-recorder.s3.amazonaws.com/images/watermarks/0EA5E9_standard.png&amp;wat_pad=283,102" /></p>
+<p>6. Click "Add Rule"</p>
+<p><img alt="" src="https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2024-01-09/743df60e-8cd7-414c-8c32-a4d78d5d1d32/user_cropped_screenshot.jpeg?tl_px=433,0&amp;br_px=1293,370&amp;force_format=png&amp;width=860&amp;wat_scale=76&amp;wat=1&amp;wat_opacity=1&amp;wat_gravity=northwest&amp;wat_url=https://colony-recorder.s3.amazonaws.com/images/watermarks/0EA5E9_standard.png&amp;wat_pad=646,20" /></p>
+<p>7. Click the "Description" field.</p>
+<p><img alt="" src="https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2024-01-09/cac20782-8f79-4ecf-9228-927f95824319/ascreenshot.jpeg?tl_px=0,0&amp;br_px=859,480&amp;force_format=png&amp;width=860&amp;wat_scale=76&amp;wat=1&amp;wat_opacity=1&amp;wat_gravity=northwest&amp;wat_url=https://colony-recorder.s3.amazonaws.com/images/watermarks/0EA5E9_standard.png&amp;wat_pad=370,196" /></p>
+<p>8. Press [[cmd]] + [[v]]</p>
+<p>9. Click the "Port" field.</p>
+<p><img alt="" src="https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2024-01-09/21dc1ee0-4849-4d09-a3f8-720e2366727e/user_cropped_screenshot.jpeg?tl_px=9,189&amp;br_px=868,670&amp;force_format=png&amp;width=860&amp;wat_scale=76&amp;wat=1&amp;wat_opacity=1&amp;wat_gravity=northwest&amp;wat_url=https://colony-recorder.s3.amazonaws.com/images/watermarks/0EA5E9_standard.png&amp;wat_pad=402,212" /></p>
+<p>10. Save</p>
 
 
 
@@ -893,9 +823,9 @@
           
             
             <a
-              href="../credoias_ports/"
+              href="../FASTAPI/"
               class="md-footer__link md-footer__link--prev"
-              aria-label="Previous: Ports and Security groups (CREDOIAS)"
+              aria-label="Previous: FastAPI (Gunicorn)"
             >
               <div class="md-footer__button md-icon">
                 
@@ -906,7 +836,7 @@
                   Previous
                 </span>
                 <div class="md-ellipsis">
-                  Ports and Security groups (CREDOIAS)
+                  FastAPI (Gunicorn)
                 </div>
               </div>
             </a>
@@ -916,16 +846,16 @@
           
             
             <a
-              href="../nginx/"
+              href="../floating_ip/"
               class="md-footer__link md-footer__link--next"
-              aria-label="Next: Nginx"
+              aria-label="Next: Adding a floating IP on CREODIAS"
             >
               <div class="md-footer__title">
                 <span class="md-footer__direction">
                   Next
                 </span>
                 <div class="md-ellipsis">
-                  Nginx
+                  Adding a floating IP on CREODIAS
                 </div>
               </div>
               <div class="md-footer__button md-icon">
