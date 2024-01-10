@@ -30,7 +30,7 @@ theme:
 extra_css: 
   - stylesheets/extra.css
   # - stylesheets/windmill.css
-  - https://fonts.googleapis.com/css2?family=Akshar&family=Plus+Jakarta+Sans&display=swap
+  - https://fonts.googleapis.com/css2?family=Akshar&family=Plus+Jakarta+Sans&family=family=IBM+Plex+Mono&display=swap
 markdown_extensions:
   - admonition
   - pymdownx.details
