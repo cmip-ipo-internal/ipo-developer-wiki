@@ -29,7 +29,8 @@ theme:
         name: Switch to light mode
 extra_css: 
   - stylesheets/extra.css
-  - stylesheets/windmill.css
+  # - stylesheets/windmill.css
+  - https://fonts.googleapis.com/css2?family=Akshar&family=Plus+Jakarta+Sans&display=swap
 markdown_extensions:
   - admonition
   - pymdownx.details
