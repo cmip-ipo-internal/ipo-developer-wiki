@@ -10,11 +10,10 @@ sudo apt install nginx
 ```
 
 
-## Configuration
 
-Nginx's main configuration file is typically located at `/etc/nginx/nginx.conf`. Additional configurations for specific sites or applications are placed in the `/etc/nginx/sites-available/` directory.
 
-### Basic Configuration
+
+## Basic Application
 
 1. **Start Nginx:**
 
@@ -27,6 +26,22 @@ Nginx's main configuration file is typically located at `/etc/nginx/nginx.conf`.
    ```bash
    sudo systemctl enable nginx
    ```
+
+## Configuration
+
+Nginx's main configuration file is typically located at `/etc/nginx/nginx.conf`. Additional configurations for specific sites or applications are placed in the `/etc/nginx/sites-available/` directory.
+
+### User permission
+Our config file starts by defining which users and groups can access the data. 
+
+```nginx
+user username groupname;
+```
+To change file permissions to work with Nginx, please refer to the Permissions page (link here).
+
+
+
+
 
 #### Server Block (Virtual Host)
 
@@ -67,11 +82,32 @@ This basic example serves files from `/var/www/html` for the specified domain.
 #### More advanced configurations
 [Nginx documentation](https://nginx.org/en/docs/).
 
-! tip "Remember to test your configuration before restarting Nginx"
+! tip Remember to test your configuration before restarting Nginx
 
-    ```bash
-    sudo nginx -t
-    ```
+    `sudo nginx -t`
+
+#### Testing the configuration. 
+To test the configuration you can try using curl on localhost: `curl -f localhost:<port>`. w working configuraiton will provide you with: 
+```html 
+<!DOCTYPE html>
+...
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+```
+    
+
+
 
 
 ## Restricting files using Nginx. 

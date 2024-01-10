@@ -1,4 +1,4 @@
-# Configuring the Ports
+# Configuring the Ports (UFW)
 There are two parts to configuring the ports used by your virutal machine.:
 
 *  The first involves configuring the firewall and opening access to the ports. 
@@ -25,11 +25,12 @@ sudo apt install ufw
 
 
 
-### System Commands to check, enable and add ports to the firewall. 
+## System Commands to check, enable and add ports to the firewall. 
 
 
 
-#### Check status, and enable
+
+### Checking the service status
 Check the service status with standard systemctl command:
 
 ```sudo systemctl status ufw```
@@ -38,6 +39,14 @@ Check the service status with standard systemctl command:
 If UFW is not working, we can enable it with:
 
 ```sudo ufw enable```
+
+### Individual port commands
+
+#### Checking the port status
+
+If we want to see what the existing rules are we can run:
+
+```sudo ufw status verbose```
 
 #### Allowing a new port. 
 

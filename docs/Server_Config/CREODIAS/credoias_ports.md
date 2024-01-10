@@ -43,3 +43,5 @@
 
 
 10\. Save
+
+!!! warn "Don't forget to add the security group to the instance! 
