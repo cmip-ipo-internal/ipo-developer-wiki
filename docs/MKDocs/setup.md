@@ -43,6 +43,15 @@ https://squidfunk.github.io/mkdocs-material/reference/admonitions/
 
 
 ### Developer notes
+
+#### Setting the permissions for Nginx. 
+If you are using a redirect server, you may also need to change the permissions of the static site you are hosting. This can be done by: 
+
+```bash 
+chown -R user:webcontent_group site/
+```
+
+#### Other
 The following are Notes and will be tidied away in due course. 
 
 https://squidfunk.github.io/mkdocs-material/getting-started/
