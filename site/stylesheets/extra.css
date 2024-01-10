@@ -4,7 +4,11 @@
 
 }
 
-.md-header__title .md-nav__title{
+.md-header__title{
+    /* color: red; */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.md-nav__title{
     /* color: red; */
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
