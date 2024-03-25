@@ -66,3 +66,10 @@ It is also possible to fetch the host key and append it to the known_hosts file
 ssh-keyscan -t rsa -p $REMOTE_PORT $REMOTE_HOST >> ~/.ssh/known_hosts
 
 ```
+
+To test the password:
+```
+ssh-keygen -y -f ~/.ssh/id_rsa
+```
+
+To enter it in one go we can also use `sshpass -p 'password' ssh xxx@yyy -i rsafile`
