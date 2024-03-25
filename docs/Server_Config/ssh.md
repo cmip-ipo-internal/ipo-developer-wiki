@@ -54,6 +54,10 @@ REMOTE_PORT=22
 ssh-copy-id -i "$PRIVATE_KEY_PATH.pub" -p $REMOTE_PORT $REMOTE_HOST
 
 
+# or we can add this manually with
+cat ~/.ssh/id_rsa.pub | ssh username@remote_host 'cat >> ~/.ssh/authorized_keys'
+
+
 ```
 
 ### Alternative
