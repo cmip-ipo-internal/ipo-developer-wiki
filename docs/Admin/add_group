@@ -1,0 +1,12 @@
+# Add a new group and assign user to it
+
+
+```
+sudo groupadd mygroup
+getent group mygroup
+sudo usermod -aG mygroup username
+
+groups username 
+
+sudo chown -R :yourgroup /var/www/html
+```
