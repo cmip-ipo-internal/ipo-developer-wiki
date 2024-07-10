@@ -1,0 +1,28 @@
+# run from env 
+
+
+```
+sudo apt install python3-venv   # Install venv module if not already installed
+python3 -m venv /path/to/your/env   # Replace /path/to/your/env with your desired path
+source /path/to/your/env/bin/activate
+```
+
+```
+<VirtualHost *:80>
+    ServerName your-domain.com
+    ServerAdmin webmaster@your-domain.com
+    
+    WSGIDaemonProcess myapp python-home=/path/to/your/env
+    WSGIProcessGroup myapp
+    
+    WSGIScriptAlias / /var/www/html/myscript.py
+    
+    <Directory /var/www/html>
+        Require all granted
+    </Directory>
+    
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+
