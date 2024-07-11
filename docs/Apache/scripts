@@ -1,0 +1,52 @@
+
+
+```
+sudo apt-get install libapache2-mod-wsgi-py3
+sudo a2enmod wsgi
+```
+
+
+
+/var/www/html/my_script.py
+
+```
+# /etc/apache2/sites-available/my_script.conf
+<VirtualHost *:80>
+    ServerName mysite.com
+
+    WSGIDaemonProcess my_script user=www-data group=www-data threads=5
+    WSGIScriptAlias / /var/www/html/my_script.py
+
+    <Directory /var/www/html>
+        WSGIProcessGroup my_script
+        WSGIApplicationGroup %{GLOBAL}
+        Require all granted
+    </Directory>
+</VirtualHost>
+```
+
+
+<VirtualHost *:80>
+    ServerName your-domain.com
+    ServerAdmin webmaster@your-domain.com
+    
+    WSGIDaemonProcess myapp python-home=/path/to/your/env
+    WSGIProcessGroup myapp
+    
+    WSGIScriptAlias / /var/www/html/myscript.py
+    
+    <Directory /var/www/html>
+        Require all granted
+    </Directory>
+    
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+
+```
+sudo a2ensite my_script.conf
+sudo systemctl restart apache2
+
+sudo apache2ctl configtest
+```
