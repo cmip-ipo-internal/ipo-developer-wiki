@@ -47,7 +47,8 @@ graph TD
         Y[calendar.conf]
         Z[template.jinja]
     end
-    ```
+end
+```
 
 ## Detailed explanation of each step:
 
