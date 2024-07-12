@@ -1,0 +1,21 @@
+
+
+```
+sudo apt update
+sudo apt install certbot python3-certbot-apache
+
+  sudo certbot --apache -d calendar.wcrp-cmip.org -d *.mipcvs.dev
+0 */12 * * * certbot renew --quiet --deploy-hook "systemctl reload apache2" -d yourdomain.com -d www.yourdomain.com
+
+
+  sudo certbot renew --dry-run
+
+
+  
+  sudo crontab -e
+  
+0 */12 * * * certbot renew --quiet --deploy-hook "systemctl reload apache2" -d yourdomain.com -d www.yourdomain.com
+
+
+  sudo certbot certificates
+```
